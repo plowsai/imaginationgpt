@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { APP_STORE_URL, PROD_URL } from "@/lib/constants"
 import { cn } from "@/lib/utils"
 import { Github } from "lucide-react"
@@ -120,6 +121,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
         <Providers />
+        <Analytics />
       </body>
     </html>
   )
