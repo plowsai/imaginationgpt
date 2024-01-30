@@ -50,21 +50,9 @@
 - [Vercel KV](https://vercel.com/storage/kv) - Redis Database 
 - [Vercel](https://vercel.com/) - Hosting
 
-## Deploy Your Own
-
-You can deploy this template to Vercel with the button below:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://dub.sh/emojis-deploy)
-
-Note that you'll need to:
-
-- Set up [Replicate](https://replicate.com)
-- Set up [PlanetScale](https://planetscale.com/)
-- Set up [Vercel Blob](https://vercel.com/docs/storage/vercel-blob/quickstart)
-- Set up [Vercel KV](https://vercel.com/docs/storage/vercel-kv/quickstart)
-
 
 ## Credits
+
 - Alexandru Ţurcanu ([@pondorasti](https://x.com/pondorasti)) - for giving permission to modify this repo and use it for imagination-gpt
 - Dylan Player ([@dylanplayer](https://twitter.com/dylanplayer)) - his contribution to the original emojis.sh repo
 [@fofrAI](https://twitter.com/fofrAI)
