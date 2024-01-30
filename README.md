@@ -1,5 +1,5 @@
-<a href="https://emojis.sh/">
-  <h1 align="center">emojis</h1>
+<a href="https://imagination.chat/">
+  <h1 align="center">Imagination GPT</h1>
 </a>
 
 <p align="center">
@@ -7,7 +7,7 @@
 </p>
 
 
- #Example:
+ # Example:
 
 - A developer comes to a web page with a text input - let's say it's OpenBB's docs.
 
@@ -32,10 +32,10 @@
   <a href="#credits"><strong>Credits</strong></a> ·
   <a href="#legal"><strong>Legal</strong></a>
 </p> -->
-
+<!-- 
 <a href="https://imagination.sh/">
     <img alt="" src="public/_static/readme.png"> 
-</a>
+</a> -->
 <br/>
 
 
@@ -63,22 +63,17 @@ Note that you'll need to:
 - Set up [Vercel Blob](https://vercel.com/docs/storage/vercel-blob/quickstart)
 - Set up [Vercel KV](https://vercel.com/docs/storage/vercel-kv/quickstart)
 
-## Authors
-
-- Alexandru Ţurcanu ([@pondorasti](https://x.com/pondorasti))
-- Dylan Player ([@dylanplayer](https://twitter.com/dylanplayer))
 
 ## Credits
-
-
-- [sdxl-emoji](https://replicate.com/fofr/sdxl-emoji) - fine tuned SDXL based on Apple's emojis by [@fofrAI](https://twitter.com/fofrAI)
+- Alexandru Ţurcanu ([@pondorasti](https://x.com/pondorasti)) - for giving permission to modify this repo and use it for imagination-gpt
+- Dylan Player ([@dylanplayer](https://twitter.com/dylanplayer)) - his contribution to the original emojis.sh repo
+[@fofrAI](https://twitter.com/fofrAI)
 - [prompt-classifier](https://replicate.com/fofr/prompt-classifier) - fine tuned llama-13b for determining toxicity by [@fofrAI](https://twitter.com/fofrAI)
 - [rembg](https://replicate.com/cjwbw/rembg) - remove images background model by [@chenxwh](https://github.com/chenxwh)
 - [Spirals](https://spirals.vercel.app/) - starter template and code examples by [@steventey](https://twitter.com/steventey)
-- [EmojiGen](https://github.com/cbh123/emoji) - original emoji generator by [@charliebholtz](https://twitter.com/charliebholtz)
 
 ## Legal
 
-- [AGPL-3.0 License](https://github.com/Pondorasti/emojis/blob/main/LICENSE)
-- [Terms & Conditions](https://emojis.sh/terms)
-- [Privacy Policy](https://emojis.sh/privacy)
+- [AGPL-3.0 License](https://github.com/[plowsai]/imaginationgpt/blob/main/LICENSE)
+- [Terms & Conditions](https://imagination.chat/terms)
+- [Privacy Policy](https://imagination.chat/privacy)
