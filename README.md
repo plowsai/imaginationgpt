@@ -3,10 +3,19 @@
 </a>
 
 <p align="center">
-  Turn your ideas into emojis in seconds. Generate your favorite Slack emojis with just one click.
+  Create web apps in seconds, using AI.
 </p>
 
-<p align="center">
+
+ #Example:
+
+- A developer comes to a web page with a text input - let's say it's OpenBB's docs.
+
+- The developer submits "I want an OpenBB app that lists top movers on the NASDAQ daily" into the text input.
+
+- In the background, the "LLM-ify" package chains together LLMs, OpenBB's docs, and OpenBB's GitHub code to output the necessary library functions and code needed to build the NASDAQ app.
+
+<!-- <p align="center">
   <a href="https://twitter.com/pondorasti">
     <img src="https://img.shields.io/twitter/follow/pondorasti?style=flat&logo=x&color=0bf&logoColor=fff" alt="Alexandru Ţurcanu's X follower count" />
   </a>
@@ -14,20 +23,19 @@
   <a href="https://github.com/pondorasti/emojis">
     <img src="https://img.shields.io/github/stars/pondorasti/emojis?label=pondorasti%2Femojis" alt="pondorasti/emojis repo star count" />
   </a>
-</p>
+</p> -->
 
-<p align="center">
+<!-- <p align="center">
   <a href="#tech-stack"><strong>Tech Stack</strong></a> ·
   <a href="#tech-stack"><strong>Deploy Your Own</strong></a> ·
   <a href="#authors"><strong>Authors</strong></a> ·
   <a href="#credits"><strong>Credits</strong></a> ·
   <a href="#legal"><strong>Legal</strong></a>
-</p>
+</p> -->
 
-<a href="https://emojis.sh/">
-    <img alt="grid of ai generated emojis including pepe-soldier, goldendoodle, minecraft-tree, and pusheen-dog " src="public/_static/readme.png"> 
+<a href="https://imagination.sh/">
+    <img alt="" src="public/_static/readme.png"> 
 </a>
-
 <br/>
 
 
