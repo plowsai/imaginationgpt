@@ -34,8 +34,8 @@ const BODY_PADDING = "px-4 sm:px-6"
 const inter = Inter({ subsets: ["latin"] })
 
 export function generateMetadata(): Metadata {
-  const title = "AI Emoji Generator"
-  const description = "Turn your ideas into emojis in seconds. Generate your favorite Slack emojis with just one click."
+  const title = "Imagination GPT"
+  const description = "Create any web-app in seconds using AI"
 
   return {
     metadataBase: new URL(PROD_URL),
