@@ -1,5 +1,5 @@
 <a href="https://imagination.chat/">
-  <h1 align="center">Imagination GPT</h1>
+  <h1 align="center">Imagination</h1>
 </a>
 
 <p align="center">

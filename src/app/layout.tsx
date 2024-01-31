@@ -34,14 +34,14 @@ const BODY_PADDING = "px-4 sm:px-6"
 const inter = Inter({ subsets: ["latin"] })
 
 export function generateMetadata(): Metadata {
-  const title = "Imagination GPT"
+  const title = "Imagination"
   const description = "Create any web-app in seconds using AI"
 
   return {
     metadataBase: new URL(PROD_URL),
     title,
     description,
-    applicationName: "Imagination GPT",
+    applicationName: "Imagination",
     other: {
       "apple-itunes-app": "app-id=6468916301",
     },
