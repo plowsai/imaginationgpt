@@ -8,7 +8,7 @@ interface CountDisplayProps {
 function CountDisplay({ count }: CountDisplayProps) {
   return (
     <p className="text-gray-500 mb-12 text-base animate-in fade-in slide-in-from-bottom-4 duration-1200 ease-in-out">
-      {count || "–––"} emojis generated and counting!
+      {count || "–––"} web apps created and counting!
     </p>
   )
 }
