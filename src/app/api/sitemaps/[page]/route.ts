@@ -25,7 +25,7 @@ export async function GET(request: Request, { params }: SitemapContextProps) {
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     ${Imaginations
       .map(
-        (Imagination) => `
+        (Imagination: any) => `
       <url>
         <loc>${PROD_URL}/p/${Imagination.id}</loc>
         <lastmod>${Imagination.updatedAt.toISOString()}</lastmod>
