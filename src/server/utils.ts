@@ -17,8 +17,8 @@ export class Response {
     return NextResponse.json({ error: { message: "Unauthorized" } }, { status: 403 })
   }
 
-  static emojiNotFound() {
-    return NextResponse.json({ error: { message: "Emoji not found" } }, { status: 404 })
+  static ImaginationNotFound() {
+    return NextResponse.json({ error: { message: "Imagination not found" } }, { status: 404 })
   }
 
   static badRequest(message: string) {
@@ -41,14 +41,14 @@ export const webhookSchema = z.object({
   }),
 })
 
-export const emojiContextSchema = z.object({
+export const ImaginationContextSchema = z.object({
   params: z.object({
     id: z.string(),
   }),
 })
-export type EmojiContextProps = z.infer<typeof emojiContextSchema>
+export type ImaginationContextProps = z.infer<typeof ImaginationContextSchema>
 
-export const VALID_EMOJI_FILTER = {
+export const VALID_Imagination_FILTER = {
   isFlagged: false,
   originalUrl: { not: null },
   noBackgroundUrl: { not: null },

@@ -107,7 +107,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               />
             </Link> */}
             <Link
-              href="https://github.com/pondorasti/emojis"
+              href="https://github.com/pondorasti/Imaginations"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center"

@@ -20,8 +20,8 @@
     <img src="https://img.shields.io/twitter/follow/pondorasti?style=flat&logo=x&color=0bf&logoColor=fff" alt="Alexandru Ţurcanu's X follower count" />
   </a>
 
-  <a href="https://github.com/pondorasti/emojis">
-    <img src="https://img.shields.io/github/stars/pondorasti/emojis?label=pondorasti%2Femojis" alt="pondorasti/emojis repo star count" />
+  <a href="https://github.com/pondorasti/Imaginations">
+    <img src="https://img.shields.io/github/stars/pondorasti/Imaginations?label=pondorasti%2FImaginations" alt="pondorasti/Imaginations repo star count" />
   </a>
 </p> -->
 
@@ -54,7 +54,7 @@
 ## Credits
 
 - Alexandru Ţurcanu ([@pondorasti](https://x.com/pondorasti)) - for giving permission to modify this repo and use it for imagination-gpt
-- Dylan Player ([@dylanplayer](https://twitter.com/dylanplayer)) - his contribution to the original emojis.sh repo
+- Dylan Player ([@dylanplayer](https://twitter.com/dylanplayer)) - his contribution to the original Imaginations.sh repo
 [@fofrAI](https://twitter.com/fofrAI)
 - [prompt-classifier](https://replicate.com/fofr/prompt-classifier) - fine tuned llama-13b for determining toxicity by [@fofrAI](https://twitter.com/fofrAI)
 - [rembg](https://replicate.com/cjwbw/rembg) - remove images background model by [@chenxwh](https://github.com/chenxwh)

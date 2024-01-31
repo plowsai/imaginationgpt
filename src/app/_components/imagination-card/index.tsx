@@ -1,14 +1,14 @@
 import { formatPrompt } from "@/lib/utils"
-import { getEmoji } from "@/server/get-emoji"
+import { getImagination } from "@/server/get-Imagination"
 import { ButtonCard } from "./button-card"
 
-interface EmojiCardProps {
+interface ImaginationCardProps {
   id: string
   alwaysShowDownloadBtn?: boolean
 }
 
-export async function EmojiCard({ id, alwaysShowDownloadBtn }: EmojiCardProps) {
-  const data = await getEmoji(id)
+export async function ImaginationCard({ id, alwaysShowDownloadBtn }: ImaginationCardProps) {
+  const data = await getImagination(id)
   if (!data) return null
 
   return (

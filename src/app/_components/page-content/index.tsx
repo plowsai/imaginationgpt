@@ -1,7 +1,7 @@
 import { Suspense } from "react"
-import { EmojiGrid } from "../emoji-grid"
-import { EmojiCount } from "../emoji-count"
-import { EmojiForm } from "../emoji-form"
+import { ImaginationGrid } from "../imagination-grid"
+import { ImaginationCount } from "../imagination-count"
+import { ImaginationForm } from "../imagination-form"
 
 interface PageContentProps extends React.PropsWithChildren {
   prompt?: string
@@ -14,16 +14,16 @@ export const PageContent = ({ children, prompt }: PageContentProps) => {
         <h1 className="font-medium text-4xl text-black mb-3 animate-in fade-in slide-in-from-bottom-3 duration-1000 ease-in-out">
           Imagination GPT
         </h1>
-        <EmojiCount />
+        <ImaginationCount />
 
         <div className="max-w-md space-y-4 w-full animate-in fade-in slide-in-from-bottom-4 duration-1200 ease-in-out">
-          <EmojiForm initialPrompt={prompt} />
+          <ImaginationForm initialPrompt={prompt} />
           {children}
         </div>
       </div>
 
       <Suspense>
-        <EmojiGrid prompt={prompt} />
+        <ImaginationGrid prompt={prompt} />
       </Suspense>
     </>
   )

@@ -1,19 +1,19 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { createEmoji } from "./action"
+import { createImagination } from "./action"
 import { SubmitButton } from "./submit-button"
 // @ts-expect-error
 import { experimental_useFormState as useFormState } from "react-dom"
 import toast from "react-hot-toast"
 import useSWR from "swr"
 
-interface EmojiFormProps {
+interface ImaginationFormProps {
   initialPrompt?: string
 }
 
-export function EmojiForm({ initialPrompt }: EmojiFormProps) {
-  const [formState, formAction] = useFormState(createEmoji)
+export function ImaginationForm({ initialPrompt }: ImaginationFormProps) {
+  const [formState, formAction] = useFormState(createImagination)
   const submitRef = useRef<React.ElementRef<"button">>(null)
   const [token, setToken] = useState("")
 

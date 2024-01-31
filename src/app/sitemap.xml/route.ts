@@ -1,13 +1,13 @@
 import { PROD_URL, SITEMAP_PAGE_SIZE } from "@/lib/constants"
 import { prisma } from "@/server/db"
-import { VALID_EMOJI_FILTER } from "@/server/utils"
+import { VALID_Imagination_FILTER } from "@/server/utils"
 
 export const dynamic = "force-dynamic"
 export const revalidate = 0
 
 export async function GET() {
-  const emojisCount = await prisma.emoji.count({ where: VALID_EMOJI_FILTER })
-  const totalSitemaps = Math.ceil(emojisCount / SITEMAP_PAGE_SIZE)
+  const ImaginationsCount = await prisma.Imagination.count({ where: VALID_Imagination_FILTER })
+  const totalSitemaps = Math.ceil(ImaginationsCount / SITEMAP_PAGE_SIZE)
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
     <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

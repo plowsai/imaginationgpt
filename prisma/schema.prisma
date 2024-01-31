@@ -12,7 +12,7 @@ datasource db {
   relationMode = "prisma"
 }
 
-model Emoji {
+model Imagination {
   id              String   @id
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt

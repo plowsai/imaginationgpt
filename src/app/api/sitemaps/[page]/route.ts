@@ -1,5 +1,5 @@
 import { PROD_URL, SITEMAP_PAGE_SIZE } from "@/lib/constants"
-import { getEmojis } from "@/server/get-emojis"
+import { getImaginations } from "@/server/get-Imaginations"
 import { Prisma } from "@prisma/client"
 import { z } from "zod"
 
@@ -15,7 +15,7 @@ export const revalidate = 0
 
 export async function GET(request: Request, { params }: SitemapContextProps) {
   const page = params.page
-  const emojis = await getEmojis({
+  const Imaginations = await getImaginations({
     take: SITEMAP_PAGE_SIZE,
     skip: page * SITEMAP_PAGE_SIZE,
     orderBy: { createdAt: Prisma.SortOrder.asc },
@@ -23,12 +23,12 @@ export async function GET(request: Request, { params }: SitemapContextProps) {
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    ${emojis
+    ${Imaginations
       .map(
-        (emoji) => `
+        (Imagination) => `
       <url>
-        <loc>${PROD_URL}/p/${emoji.id}</loc>
-        <lastmod>${emoji.updatedAt.toISOString()}</lastmod>
+        <loc>${PROD_URL}/p/${Imagination.id}</loc>
+        <lastmod>${Imagination.updatedAt.toISOString()}</lastmod>
       </url>
     `
       )

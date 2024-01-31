@@ -1,6 +1,6 @@
 "use client"
 
-import { EMOJI_SIZE } from "@/lib/constants"
+import { Imagination_SIZE } from "@/lib/constants"
 import { track } from "@vercel/analytics"
 import { Download } from "lucide-react"
 import Image from "next/image"
@@ -31,16 +31,16 @@ async function fetcher(url: string) {
   return fetch(url)
     .then((res) => res.json())
     .then((json) => ({
-      recentSrc: json.emoji.noBackgroundUrl,
-      error: json.emoji.error,
+      recentSrc: json.Imagination.noBackgroundUrl,
+      error: json.Imagination.error,
     }))
 }
 
 export function ButtonCard({ id, name, src: _src, createdAt, alwaysShowDownloadBtn }: ButtonCard) {
   // revalidate image src every second while generating (max 1 minute)
   const isGenerating = new Date(createdAt).getTime() > Date.now() - 60_000
-  const { data, isLoading: isLoadingEmoji } = useSWR<Awaited<ReturnType<typeof fetcher>>>(
-    !_src && isGenerating ? `/api/emojis/${id}` : null,
+  const { data, isLoading: isLoadingImagination } = useSWR<Awaited<ReturnType<typeof fetcher>>>(
+    !_src && isGenerating ? `/api/Imaginations/${id}` : null,
     {
       fetcher,
       refreshInterval: (data) => (!!data?.recentSrc || !isGenerating ? 0 : 1000), // 1 second
@@ -48,11 +48,11 @@ export function ButtonCard({ id, name, src: _src, createdAt, alwaysShowDownloadB
   )
 
   const [isLoadingImage, setIsLoadingImage] = useState(false)
-  const [isDownloadingEmoji, setIsDownloadingEmoji] = useState(false)
+  const [isDownloadingImagination, setIsDownloadingImagination] = useState(false)
 
   const src = data?.recentSrc || _src
   const showImageTag = !!src // don't render image tag if no src
-  const showImagePlaceholder = isLoadingEmoji || isLoadingImage || !showImageTag
+  const showImagePlaceholder = isLoadingImagination || isLoadingImage || !showImageTag
 
   useEffect(() => {
     if (!showImageTag || !isLoadingImage) return
@@ -60,15 +60,15 @@ export function ButtonCard({ id, name, src: _src, createdAt, alwaysShowDownloadB
   }, [isLoadingImage, showImageTag])
 
   useEffect(() => {
-    if (isLoadingEmoji || !data?.error) return
+    if (isLoadingImagination || !data?.error) return
     toast.error(data.error)
-  }, [isLoadingEmoji, data?.error])
+  }, [isLoadingImagination, data?.error])
 
   async function handleDownload() {
     if (!src) return
 
-    track("Download Emoji")
-    setIsDownloadingEmoji(true)
+    track("Download Imagination")
+    setIsDownloadingImagination(true)
     const toastId = toast.loading(`Downloading :${name}:`)
 
     try {
@@ -85,7 +85,7 @@ export function ButtonCard({ id, name, src: _src, createdAt, alwaysShowDownloadB
       console.error(error)
       toast.error(`Failed to download :${name}:`, { id: toastId })
     } finally {
-      setIsDownloadingEmoji(false)
+      setIsDownloadingImagination(false)
     }
   }
 
@@ -96,10 +96,10 @@ export function ButtonCard({ id, name, src: _src, createdAt, alwaysShowDownloadB
     >
       {showImageTag && (
         <Image
-          alt="ai generated emoji"
+          alt="ai generated Imagination"
           src={src}
-          width={EMOJI_SIZE}
-          height={EMOJI_SIZE}
+          width={Imagination_SIZE}
+          height={Imagination_SIZE}
           className="h-8 w-8 aspect-square"
           onLoadingComplete={() => setIsLoadingImage(false)}
         />
@@ -124,10 +124,10 @@ export function ButtonCard({ id, name, src: _src, createdAt, alwaysShowDownloadB
           !showImageTag && "hidden"
         )}
         onClick={handleDownload}
-        disabled={isDownloadingEmoji || !showImageTag}
+        disabled={isDownloadingImagination || !showImageTag}
       >
-        <span className="sr-only">Download emoji</span>
-        {isDownloadingEmoji ? <Loader /> : <Download size={16} />}
+        <span className="sr-only">Download Imagination</span>
+        {isDownloadingImagination ? <Loader /> : <Download size={16} />}
       </button>
     </div>
   )

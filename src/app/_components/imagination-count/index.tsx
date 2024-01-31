@@ -1,4 +1,4 @@
-import { getEmojisCount } from "@/server/get-emojis-count"
+import { getImaginationsCount } from "@/server/get-Imaginations-count"
 import { Suspense } from "react"
 
 interface CountDisplayProps {
@@ -13,16 +13,16 @@ function CountDisplay({ count }: CountDisplayProps) {
   )
 }
 
-async function AsyncEmojiCount() {
-  const count = await getEmojisCount()
+async function AsyncImaginationCount() {
+  const count = await getImaginationsCount()
 
   return <CountDisplay count={count} />
 }
 
-export function EmojiCount() {
+export function ImaginationCount() {
   return (
     <Suspense fallback={<CountDisplay />}>
-      <AsyncEmojiCount />
+      <AsyncImaginationCount />
     </Suspense>
   )
 }

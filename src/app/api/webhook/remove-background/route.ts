@@ -15,7 +15,7 @@ export async function POST(req: Request) {
     const { output, error } = body
 
     if (typeof error === "string") {
-      await prisma.emoji.update({ where: { id }, data: { isFlagged: true, error } })
+      await prisma.Imagination.update({ where: { id }, data: { isFlagged: true, error } })
       return Response.success()
     }
 
@@ -27,8 +27,8 @@ export async function POST(req: Request) {
     // upload & store image
     const { url } = await put(`${id}-original.png`, file, { access: "public" })
 
-    // update emoji
-    await prisma.emoji.update({ where: { id }, data: { originalUrl: url } })
+    // update Imagination
+    await prisma.Imagination.update({ where: { id }, data: { originalUrl: url } })
 
     const res = await replicate.removeBackground({ id, image: output[0] })
     console.log(res)
