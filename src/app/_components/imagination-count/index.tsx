@@ -1,4 +1,4 @@
-import { getImaginationsCount } from "@/server/get-Imaginations-count"
+import { getImaginationsCount } from "@/server/get-emojis-count"
 import { Suspense } from "react"
 
 interface CountDisplayProps {
