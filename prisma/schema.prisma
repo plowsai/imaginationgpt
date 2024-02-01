@@ -3,7 +3,7 @@
 
 generator client {
   provider        = "prisma-client-js"
-  previewFeatures = ["fullTextSearch"]
+  previewFeatures = ["fullTextSearch","fullTextIndex"]
 }
 
 datasource db {
@@ -25,5 +25,6 @@ model Imagination {
   error           String?
 
   @@index([isFlagged, originalUrl, noBackgroundUrl])
+  @@map(name: "idx_prompt_fulltext", fields: [prompt], type: "fulltext") // Define fulltext index using the correct syntax
   @@fulltext([prompt])
 }
