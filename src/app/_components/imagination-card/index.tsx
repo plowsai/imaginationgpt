@@ -1,6 +1,6 @@
 import { formatPrompt } from "@/lib/utils"
 import { getImagination } from "@/server/get-Imagination"
-import { ButtonCard } from "./button-card"
+import { ButtonCard } from "./button-card.tsx"
 
 interface ImaginationCardProps {
   id: string
