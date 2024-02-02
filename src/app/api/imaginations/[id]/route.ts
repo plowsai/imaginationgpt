@@ -1,19 +1,19 @@
 import { prisma } from "@/server/db"
-import { ImaginationContextProps, Response } from "@/server/utils"
+import { imaginationContextProps, Response } from "@/server/utils"
 import { NextResponse } from "next/server"
 
 export const runtime = "edge"
 export const fetchCache = "force-no-store"
 export const revalidate = 0
 
-export async function GET(request: Request, { params }: ImaginationContextProps) {
+export async function GET(request: Request, { params }: imaginationContextProps) {
   try {
-    const Imagination = await prisma.Imagination.findUnique({
+    const imagination = await prisma.ismagination.findUnique({
       where: { id: params.id },
     })
-    if (!Imagination) return Response.ImaginationNotFound()
+    if (!imagination) return Response.imaginationNotFound()
 
-    return NextResponse.json({ Imagination }, { status: 200 })
+    return NextResponse.json({ imagination }, { status: 200 })
   } catch (error) {
     console.error(error)
     return Response.internalServerError()

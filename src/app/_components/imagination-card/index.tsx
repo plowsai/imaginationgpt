@@ -1,14 +1,14 @@
 import { formatPrompt } from "@/lib/utils"
-import { getImagination } from "@/server/get-Imagination"
-import { ButtonCard } from "./button-card.tsx"
+import { getimagination } from "@/server/get-imagination"
+import { ButtonCard } from "./button-card"
 
-interface ImaginationCardProps {
+interface imaginationCardProps {
   id: string
   alwaysShowDownloadBtn?: boolean
 }
 
-export async function ImaginationCard({ id, alwaysShowDownloadBtn }: ImaginationCardProps) {
-  const data = await getImagination(id)
+export async function imaginationCard({ id, alwaysShowDownloadBtn }: imaginationCardProps) {
+  const data = await getimagination(id)
   if (!data) return null
 
   return (

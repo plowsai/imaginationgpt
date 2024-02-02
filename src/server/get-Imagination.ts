@@ -1,7 +1,7 @@
 import "server-only"
 import { prisma } from "./db"
 
-export const getImagination = async (id: string) =>
-  prisma.Imagination.findUnique({
+export const getimagination = async (id: string) =>
+  prisma.imagination.findUnique({
     where: { id },
   })

@@ -1,15 +1,15 @@
 import { Prisma } from "@prisma/client"
 import "server-only"
 import { prisma } from "./db"
-import { VALID_Imagination_FILTER } from "./utils"
+import { VALID_imagination_FILTER } from "./utils"
 import { PrismaCacheStrategy } from "@prisma/extension-accelerate"
 
-export const getImaginations = async (opts: {
+export const getimaginations = async (opts: {
   take?: number
   skip?: number
   orderBy?:
-    | Prisma.ImaginationOrderByWithRelationAndSearchRelevanceInput
-    | Prisma.ImaginationOrderByWithRelationAndSearchRelevanceInput[]
+    | Prisma.imaginationOrderByWithRelationAndSearchRelevanceInput
+    | Prisma.imaginationOrderByWithRelationAndSearchRelevanceInput[]
   cacheStrategy?: PrismaCacheStrategy["cacheStrategy"]
 }) => {
   const take = opts.take ?? 100
@@ -17,10 +17,10 @@ export const getImaginations = async (opts: {
   const orderBy = opts.orderBy ?? { createdAt: Prisma.SortOrder.desc }
   const cacheStrategy = opts.cacheStrategy ?? undefined
 
-  return prisma.Imagination.findMany({
+  return prisma.imagination.findMany({
     select: { id: true, updatedAt: true },
     orderBy,
-    where: VALID_Imagination_FILTER,
+    where: VALID_imagination_FILTER,
     take,
     skip,
     cacheStrategy,

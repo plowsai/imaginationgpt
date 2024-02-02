@@ -1,7 +1,7 @@
 import { Suspense } from "react"
-import { ImaginationGrid } from "../Imagination-grid"
-import { ImaginationCount } from "../Imagination-count"
-import { ImaginationForm } from "../Imagination-form"
+import { ImaginationGrid } from "../imagination-grid"
+import { ImaginationCount } from "../imagination-count"
+import { ImaginationForm } from "../imagination-form"
 
 interface PageContentProps extends React.PropsWithChildren {
   prompt?: string

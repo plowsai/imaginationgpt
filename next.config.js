@@ -12,12 +12,12 @@ const nextConfig = withAxiom({
   rewrites: async () => [
     {
       source: "/privacy",
-      destination: "https://api.Imaginations.sh/assets/privacy",
+      destination: "https://api.imaginations.sh/assets/privacy",
       basePath: false,
     },
     {
       source: "/terms",
-      destination: "https://api.Imaginations.sh/assets/terms",
+      destination: "https://api.imaginations.sh/assets/terms",
       basePath: false,
     },
   ],

@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/server"
 
-const Imagination_SIZE = 570
+const imagination_SIZE = 570
 export const size = {
   width: 1200,
   height: 630,
@@ -28,7 +28,7 @@ export function OpenGraphImage({ url }: OpenGraphImageProps) {
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img alt="" height={Imagination_SIZE} src={url} width={Imagination_SIZE} />
+        <img alt="" height={imagination_SIZE} src={url} width={imagination_SIZE} />
       </div>
     )
   )

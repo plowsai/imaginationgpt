@@ -1,5 +1,5 @@
-<a href="https://Imagination.chat/">
-  <h1 align="center">Imagination</h1>
+<a href="https://imagination.chat/">
+  <h1 align="center">imagination</h1>
 </a>
 
 <p align="center">
@@ -20,8 +20,8 @@
     <img src="https://img.shields.io/twitter/follow/pondorasti?style=flat&logo=x&color=0bf&logoColor=fff" alt="Alexandru Ţurcanu's X follower count" />
   </a>
 
-  <a href="https://github.com/pondorasti/Imaginations">
-    <img src="https://img.shields.io/github/stars/pondorasti/Imaginations?label=pondorasti%2FImaginations" alt="pondorasti/Imaginations repo star count" />
+  <a href="https://github.com/pondorasti/imaginations">
+    <img src="https://img.shields.io/github/stars/pondorasti/imaginations?label=pondorasti%2Fimaginations" alt="pondorasti/imaginations repo star count" />
   </a>
 </p> -->
 
@@ -33,7 +33,7 @@
   <a href="#legal"><strong>Legal</strong></a>
 </p> -->
 <!-- 
-<a href="https://Imagination.sh/">
+<a href="https://imagination.sh/">
     <img alt="" src="public/_static/readme.png"> 
 </a> -->
 <br/>
@@ -53,8 +53,8 @@
 
 ## Credits
 
-- Alexandru Ţurcanu ([@pondorasti](https://x.com/pondorasti)) - for giving permission to modify this repo and use it for Imagination-gpt
-- Dylan Player ([@dylanplayer](https://twitter.com/dylanplayer)) - his contribution to the original Imaginations.sh repo
+w- Alexandru Ţurcanu ([@pondorasti](https://x.com/pondorasti)) - for giving permission to modify this repo and use it for imagination-gpt
+- Dylan Player ([@dylanplayer](https://twitter.com/dylanplayer)) - his contribution to the original imaginations.sh repo
 [@fofrAI](https://twitter.com/fofrAI)
 - [prompt-classifier](https://replicate.com/fofr/prompt-classifier) - fine tuned llama-13b for determining toxicity by [@fofrAI](https://twitter.com/fofrAI)
 - [rembg](https://replicate.com/cjwbw/rembg) - remove images background model by [@chenxwh](https://github.com/chenxwh)
@@ -62,6 +62,6 @@
 
 ## Legal
 
-- [AGPL-3.0 License](https://github.com/[plowsai]/Imaginationgpt/blob/main/LICENSE)
-- [Terms & Conditions](https://Imagination.chat/terms)
-- [Privacy Policy](https://Imagination.chat/privacy)
+- [AGPL-3.0 License](https://github.com/[plowsai]/imaginationgpt/blob/main/LICENSE)
+- [Terms & Conditions](https://imagination.chat/terms)
+- [Privacy Policy](https://imagination.chat/privacy)

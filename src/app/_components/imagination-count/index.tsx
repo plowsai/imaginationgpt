@@ -1,4 +1,4 @@
-import { getImaginationsCount } from "@/server/get-Imaginations-count"
+import { getimaginationsCount } from "@/server/get-imaginations-count"
 import { Suspense } from "react"
 
 interface CountDisplayProps {
@@ -13,16 +13,16 @@ function CountDisplay({ count }: CountDisplayProps) {
   )
 }
 
-async function AsyncImaginationCount() {
-  const count = await getImaginationsCount()
+async function AsyncimaginationCount() {
+  const count = await getimaginationsCount()
 
   return <CountDisplay count={count} />
 }
 
-export function ImaginationCount() {
+export function imaginationCount() {
   return (
     <Suspense fallback={<CountDisplay />}>
-      <AsyncImaginationCount />
+      <AsyncimaginationCount />
     </Suspense>
   )
 }

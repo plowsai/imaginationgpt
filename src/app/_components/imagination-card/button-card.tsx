@@ -1,6 +1,6 @@
 "use client"
 
-import { Imagination_SIZE } from "@/lib/constants"
+import { imagination_SIZE } from "@/lib/constants"
 import { track } from "@vercel/analytics"
 import { Download } from "lucide-react"
 import Image from "next/image"
@@ -13,7 +13,7 @@ import useSWR from "swr"
 interface ButtonCard {
   id: string
   name: string
-  src: string | null
+  src: string | nulls
   createdAt: Date
   alwaysShowDownloadBtn?: boolean
 }
@@ -31,16 +31,16 @@ async function fetcher(url: string) {
   return fetch(url)
     .then((res) => res.json())
     .then((json) => ({
-      recentSrc: json.Imagination.noBackgroundUrl,
-      error: json.Imagination.error,
+      recentSrc: json.imagination.noBackgroundUrl,
+      error: json.imagination.error,
     }))
 }
 
 export function ButtonCard({ id, name, src: _src, createdAt, alwaysShowDownloadBtn }: ButtonCard) {
   // revalidate image src every second while generating (max 1 minute)
   const isGenerating = new Date(createdAt).getTime() > Date.now() - 60_000
-  const { data, isLoading: isLoadingImagination } = useSWR<Awaited<ReturnType<typeof fetcher>>>(
-    !_src && isGenerating ? `/api/Imaginations/${id}` : null,
+  const { data, isLoading: isLoadingimagination } = useSWR<Awaited<ReturnType<typeof fetcher>>>(
+    !_src && isGenerating ? `/api/imaginations/${id}` : null,
     {
       fetcher,
       refreshInterval: (data) => (!!data?.recentSrc || !isGenerating ? 0 : 1000), // 1 second
@@ -48,11 +48,11 @@ export function ButtonCard({ id, name, src: _src, createdAt, alwaysShowDownloadB
   )
 
   const [isLoadingImage, setIsLoadingImage] = useState(false)
-  const [isDownloadingImagination, setIsDownloadingImagination] = useState(false)
+  const [isDownloadingimagination, setIsDownloadingimagination] = useState(false)
 
   const src = data?.recentSrc || _src
   const showImageTag = !!src // don't render image tag if no src
-  const showImagePlaceholder = isLoadingImagination || isLoadingImage || !showImageTag
+  const showImagePlaceholder = isLoadingimagination || isLoadingImage || !showImageTag
 
   useEffect(() => {
     if (!showImageTag || !isLoadingImage) return
@@ -60,15 +60,15 @@ export function ButtonCard({ id, name, src: _src, createdAt, alwaysShowDownloadB
   }, [isLoadingImage, showImageTag])
 
   useEffect(() => {
-    if (isLoadingImagination || !data?.error) return
+    if (isLoadingimagination || !data?.error) return
     toast.error(data.error)
-  }, [isLoadingImagination, data?.error])
+  }, [isLoadingimagination, data?.error])
 
   async function handleDownload() {
     if (!src) return
 
-    track("Download Imagination")
-    setIsDownloadingImagination(true)
+    track("Download imagination")
+    setIsDownloadingimagination(true)
     const toastId = toast.loading(`Downloading :${name}:`)
 
     try {
@@ -85,7 +85,7 @@ export function ButtonCard({ id, name, src: _src, createdAt, alwaysShowDownloadB
       console.error(error)
       toast.error(`Failed to download :${name}:`, { id: toastId })
     } finally {
-      setIsDownloadingImagination(false)
+      setIsDownloadingimagination(false)
     }
   }
 
@@ -96,10 +96,10 @@ export function ButtonCard({ id, name, src: _src, createdAt, alwaysShowDownloadB
     >
       {showImageTag && (
         <Image
-          alt="ai generated Imagination"
+          alt="ai generated imagination"
           src={src}
-          width={Imagination_SIZE}
-          height={Imagination_SIZE}
+          width={imagination_SIZE}
+          height={imagination_SIZE}
           className="h-8 w-8 aspect-square"
           onLoadingComplete={() => setIsLoadingImage(false)}
         />
@@ -124,10 +124,10 @@ export function ButtonCard({ id, name, src: _src, createdAt, alwaysShowDownloadB
           !showImageTag && "hidden"
         )}
         onClick={handleDownload}
-        disabled={isDownloadingImagination || !showImageTag}
+        disabled={isDownloadingimagination || !showImageTag}
       >
-        <span className="sr-only">Download Imagination</span>
-        {isDownloadingImagination ? <Loader /> : <Download size={16} />}
+        <span className="sr-only">Download imagination</span>
+        {isDownloadingimagination ? <Loader /> : <Download size={16} />}
       </button>
     </div>
   )

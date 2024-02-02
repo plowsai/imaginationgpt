@@ -1,6 +1,6 @@
 import Replicate from "replicate"
 import "server-only"
-import { Imagination_SIZE, SITE_URL } from "../lib/constants"
+import { imagination_SIZE, SITE_URL } from "../lib/constants"
 
 export class ReplicateClient {
   replicate: Replicate
@@ -13,7 +13,7 @@ export class ReplicateClient {
       fetch(input, { ...init, cache: "no-store" })
   }
 
-  async createImagination({ id, prompt }: { id: string; prompt: string }) {
+  async createimagination({ id, prompt }: { id: string; prompt: string }) {
     const webhook = new URL(`${SITE_URL}/api/webhook/remove-background`)
     webhook.searchParams.set("id", id)
     webhook.searchParams.set("secret", process.env.API_SECRET as string)
@@ -21,9 +21,9 @@ export class ReplicateClient {
     return this.replicate.predictions.create({
       version: "dee76b5afde21b0f01ed7925f0665b7e879c50ee718c5f78a9d38e04d523cc5e",
       input: {
-        prompt: `A TOK Imagination of a ${prompt}`,
-        width: Imagination_SIZE,
-        height: Imagination_SIZE,
+        prompt: `A TOK imagination of a ${prompt}`,
+        width: imagination_SIZE,
+        height: imagination_SIZE,
         num_inference_steps: 30,
         // prompt_strength: 0.8,
         negative_prompt: "racist, xenophobic, antisemitic, islamophobic, bigoted",
@@ -34,7 +34,7 @@ export class ReplicateClient {
   }
 
   async removeBackground({ id, image }: { id: string; image: string }) {
-    const webhook = new URL(`${SITE_URL}/api/webhook/save-Imagination`)
+    const webhook = new URL(`${SITE_URL}/api/webhook/save-imagination`)
     webhook.searchParams.set("id", id)
     webhook.searchParams.set("secret", process.env.API_SECRET as string)
 

@@ -12,7 +12,7 @@ datasource db {
   relationMode = "prisma"
 }
 
-model Imagination {
+model imagination {
   id              String   @id
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt()

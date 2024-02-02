@@ -1,19 +1,19 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { createImagination } from "./action"
+import { createimagination } from "./action"
 import { SubmitButton } from "./submit-button"
 // @ts-expect-error
 import { experimental_useFormState as useFormState } from "react-dom"
 import toast from "react-hot-toast"
 import useSWR from "swr"
 
-interface ImaginationFormProps {
+interface imaginationFormProps {
   initialPrompt?: string
 }
 
-export function ImaginationForm({ initialPrompt }: ImaginationFormProps) {
-  const [formState, formAction] = useFormState(createImagination)
+export function imaginationForm({ initialPrompt }: imaginationFormProps) {
+  const [formState, formAction] = useFormState(createimagination)
   const submitRef = useRef<React.ElementRef<"button">>(null)
   const [token, setToken] = useState("")
 

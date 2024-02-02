@@ -1,6 +1,6 @@
 import { Prisma } from "@prisma/client";
 import { PROD_URL, SITEMAP_PAGE_SIZE } from "@/lib/constants";
-import { getImaginations } from "@/server/get-Imaginations";
+import { getimaginations } from "@/server/get-imaginations";
 import { z } from "zod";
 
 const sitemapContextSchema = z.object({
@@ -16,7 +16,7 @@ export const revalidate = 0;
 
 export async function GET(request: Request, { params }: SitemapContextProps) {
  const page = params.page;
- const Imaginations = await getImaginations({
+ const imaginations = await getimaginations({
     take: SITEMAP_PAGE_SIZE,
     skip: page * SITEMAP_PAGE_SIZE,
     orderBy: { createdAt: 'asc' },
@@ -24,12 +24,12 @@ export async function GET(request: Request, { params }: SitemapContextProps) {
 
  const xml = `<?xml version="1.0" encoding="UTF-8"?>
  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    ${Imaginations
+    ${imaginations
       .map(
-        (Imagination: any) => `
+        (imagination: any) => `
       <url>
-        <loc>${PROD_URL}/p/${Imagination.id}</loc>
-        <lastmod>${Imagination.updatedAt.toISOString()}</lastmod>
+        <loc>${PROD_URL}/p/${imagination.id}</loc>
+        <lastmod>${imagination.updatedAt.toISOString()}</lastmod>
       </url>
     `
       )

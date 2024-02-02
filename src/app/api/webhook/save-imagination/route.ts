@@ -20,8 +20,8 @@ export async function POST(req: Request) {
     // upload & store image
     const { url } = await put(`${id}-no-background.png`, file, { access: "public" })
 
-    // update Imagination
-    await prisma.Imagination.update({ where: { id }, data: { noBackgroundUrl: url } })
+    // update imagination
+    await prisma.imagination.update({ where: { id }, data: { noBackgroundUrl: url } })
 
     return Response.success()
   } catch (error) {

@@ -30,7 +30,7 @@ interface FormState {
   message: string
 }
 
-export async function createImagination(prevFormState: FormState | undefined, formData: FormData): Promise<FormState | void> {
+export async function createimagination(prevFormState: FormState | undefined, formData: FormData): Promise<FormState | void> {
   const prompt = (formData.get("prompt") as string | null)?.trim().replaceAll(":", "")
   const token = formData.get("token") as string | null
 
@@ -48,11 +48,11 @@ export async function createImagination(prevFormState: FormState | undefined, fo
     const data = { id, prompt, safetyRating }
 
     if (safetyRating >= 9) {
-      await prisma.Imagination.create({ data: { ...data, isFlagged: true } })
+      await prisma.imagination.create({ data: { ...data, isFlagged: true } })
       return { message: "Nice try! Your prompt is inappropriate, let's keep it PG." }
     }
 
-    await Promise.all([prisma.Imagination.create({ data }), replicate.createImagination(data)])
+    await Promise.all([prisma.imagination.create({ data }), replicate.createimagination(data)])
   } catch (error) {
     console.error(error)
     return { message: "Connection error, please refresh the page." }
