@@ -1,8 +1,12 @@
 import { getImaginations } from "@/server/get-Imaginations"
-import { ImaginationCard } from "../imagination-card"
+import { ImaginationCard } from "../Imagination-card"
 
 interface ImaginationGridProps {
   prompt?: string
+}
+
+interface ImaginationType {
+  id: string;
 }
 
 export async function ImaginationGrid({ prompt }: ImaginationGridProps) {

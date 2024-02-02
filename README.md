@@ -1,4 +1,4 @@
-<a href="https://imagination.chat/">
+<a href="https://Imagination.chat/">
   <h1 align="center">Imagination</h1>
 </a>
 
@@ -33,7 +33,7 @@
   <a href="#legal"><strong>Legal</strong></a>
 </p> -->
 <!-- 
-<a href="https://imagination.sh/">
+<a href="https://Imagination.sh/">
     <img alt="" src="public/_static/readme.png"> 
 </a> -->
 <br/>
@@ -53,7 +53,7 @@
 
 ## Credits
 
-- Alexandru Ţurcanu ([@pondorasti](https://x.com/pondorasti)) - for giving permission to modify this repo and use it for imagination-gpt
+- Alexandru Ţurcanu ([@pondorasti](https://x.com/pondorasti)) - for giving permission to modify this repo and use it for Imagination-gpt
 - Dylan Player ([@dylanplayer](https://twitter.com/dylanplayer)) - his contribution to the original Imaginations.sh repo
 [@fofrAI](https://twitter.com/fofrAI)
 - [prompt-classifier](https://replicate.com/fofr/prompt-classifier) - fine tuned llama-13b for determining toxicity by [@fofrAI](https://twitter.com/fofrAI)
@@ -62,6 +62,6 @@
 
 ## Legal
 
-- [AGPL-3.0 License](https://github.com/[plowsai]/imaginationgpt/blob/main/LICENSE)
-- [Terms & Conditions](https://imagination.chat/terms)
-- [Privacy Policy](https://imagination.chat/privacy)
+- [AGPL-3.0 License](https://github.com/[plowsai]/Imaginationgpt/blob/main/LICENSE)
+- [Terms & Conditions](https://Imagination.chat/terms)
+- [Privacy Policy](https://Imagination.chat/privacy)

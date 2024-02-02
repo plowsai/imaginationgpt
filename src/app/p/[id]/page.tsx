@@ -1,4 +1,4 @@
-import { ImaginationCard } from "@/app/_components/imagination-card"
+import { ImaginationCard } from "@/app/_components/Imagination-card"
 import { PageContent } from "@/app/_components/page-content"
 import { formatPrompt } from "@/lib/utils"
 import { getImagination } from "@/server/get-Imagination"

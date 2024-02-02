@@ -49,7 +49,7 @@ export function generateMetadata(): Metadata {
       title,
       description,
       url: PROD_URL,
-      siteName: "imagination.chat",
+      siteName: "Imagination.chat",
       locale: "en_US",
       type: "website",
     },
